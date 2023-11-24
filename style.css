@@ -6,20 +6,21 @@
 
 html {
   background-color: rgb(248, 248, 248);
+  font-size: 62.5%;
 }
 
 .calculator {
-  height: 650px;
-  width: 35%;
-  margin: 10%;
+  height: 65rem;
+  width: 43rem;
   text-align: center;
   position: relative;
-  left: 20%;
   background-color: white;
   border-radius: 2%;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 5.1);
   overflow: hidden;
+  margin: auto;
+  margin-top: 6%;
 }
 
 .displayResult {
@@ -40,6 +41,10 @@ html {
 .displayResult input {
   height: 100%;
   width: 80%;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(255, 255, 255, 0.2);
+  background-color: #a7af7c;
+  border: none;
+  border-radius: 2%;
 }
 
 button {
@@ -47,7 +52,8 @@ button {
   width: 20%;
   background-color: #f0f0f0; /* Example color */
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 1.2);
 }
 
 .button-row.second,
@@ -62,6 +68,7 @@ button {
 
 .clear {
   width: 47%;
+  background-color: rgb(240, 0, 0);
 }
 
 .divide {
@@ -96,3 +103,33 @@ button {
 /* fifth row style */
 /* fifth row style */
 /* fifth row style */
+
+.equal {
+  background-color: rgb(33, 150, 243);
+}
+
+.delete {
+  background-color: rgb(8, 151, 156);
+}
+
+@media only screen and (max-width: 1000px) {
+  .calculator {
+    margin-top: 11%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .calculator {
+    margin-top: 33%;
+    height: 55rem;
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .calculator {
+    margin-top: 46%;
+    height: 40rem;
+    width: 25rem;
+  }
+}
