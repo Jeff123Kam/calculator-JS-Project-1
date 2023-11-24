@@ -54,6 +54,8 @@ button {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 1.2);
+  color: black;
+  font-size: 240%;
 }
 
 .button-row.second,
@@ -123,6 +125,10 @@ button {
     margin-top: 33%;
     height: 55rem;
     width: 30rem;
+  }
+
+  button {
+    font-size: 190%;
   }
 }
 
