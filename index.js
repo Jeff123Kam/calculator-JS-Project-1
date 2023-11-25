@@ -84,3 +84,24 @@ function calculation() {
 }
 
 equal.addEventListener("click", calculation);
+
+/*
+Step 1: Define Your Variables
+Create variables to store the current input, the previous input, the current operation, and a flag to check if the result was just displayed.
+Step 2: Add Event Listeners
+Attach event listeners to all of your buttons. You'll want to differentiate between number buttons, operation buttons (plus, minus, multiply, divide), and function buttons (equal, clear, delete).
+Step 3: Implement Functions for Calculator Operations
+You'll need functions to handle:
+Adding numbers to the input.
+Storing the current number when an operation button is clicked.
+Executing the calculation when equals is pressed.
+Clearing the input or deleting a character.
+Step 4: Updating the Display
+Create a function that updates the display with the current input or the result of a calculation.
+Step 5: Performing the Calculation
+When the equals button is pressed, you need to perform the calculation based on the stored operation and input values. Be careful with division by zero!
+Step 6: Handle Decimal Points
+Ensure that only one decimal point can be added to the input and handle any calculations with floating point numbers correctly.
+Step 7: Continuous Operations
+Allow for continuous operations, such as pressing an operation button after the equals button, to use the result in the next operation.
+*/
