@@ -1,8 +1,3 @@
-/*     
-Step 1: Define Your Variables
-Create variables to store the current input, the previous input, the current operation, and a flag to check if the result was just displayed.
- */
-
 let currentInput = ""; //to keep track of the input entered by the user
 let previousInput = ""; // to store the previous input or the result of the last operation
 let currentOperation = null; // to keep track of the selected operation
@@ -12,13 +7,6 @@ function updateDisplay(newValue) {
   const display = document.querySelector("#numDisplay"); // Select the display element
   display.value = newValue; // Update its value
 }
-/*
-Step 2: Add Event Listeners
-Attach event listeners to all of your buttons. 
-You'll want to differentiate between number buttons, 
-operation buttons (plus, minus, multiply, divide), 
-and function buttons (equal, clear, delete).
-*/
 
 //select all the number and value and few operation
 const allnumberAndOpeation = document.querySelectorAll(".number");
@@ -45,14 +33,20 @@ function appendNumber(number) {
   updateDisplay(currentInput);
 }
 
+//debug example
 function appendOperator(operator) {
   console.log("Current Input:", currentInput); // Debugging
   console.log("Operator:", operator); // Debugging
 
   if (currentInput === "" && operator !== "-") {
+    console.log("Condition for empty input and non-minus operator, exiting...");
     return; // Do nothing if these conditions are met
   }
-  if (isNaN(currentInput[currentInput.length - 1])) {
+  if (currentInput !== "" && isNaN(currentInput[currentInput.length - 1])) {
+    console.log(typeof currentInput);
+    console.log(
+      "Condition for last character not a number and operator not minus, exiting..."
+    );
     return; // Prevent adding another operator if the last character is not a number
   }
   currentInput += operator;
@@ -83,3 +77,10 @@ function deleteNumOper() {
 }
 
 deleteion.addEventListener("click", deleteNumOper);
+
+function calculation() {
+  currentInput = eval(currentInput).toString();
+  updateDisplay(currentInput);
+}
+
+equal.addEventListener("click", calculation);
